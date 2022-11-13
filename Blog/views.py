@@ -18,3 +18,9 @@ def Blog_home(request):
 
 def Blog_about(request):
 	return render(request,'Blog/About.html')
+
+def Blog_login(request):
+	return render(request,'Blog/Login.html')
+
+def Blog_register(request):
+	return render(request,'Blog/Register.html')
