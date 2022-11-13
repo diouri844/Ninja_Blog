@@ -18,10 +18,18 @@
 		<div class="card border-light m-5" 
 			style="
 			max-width: 20rem;">
-	  		<div class="card-header"><i class="bi bi-pencil-square"></i> {{ post.title }}</div>
+	  		<div class="card-header" style="color:#ccc">
+	  			<i class="bi bi-pencil-square"></i>
+	  			 {{ post.title }}
+	  		</div>
 	  		<div class="card-body bg-light">
-	    		<h4 class="card-title">by : {{ post.author }}</h4>
-	    		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	    		<h4 class="card-title text-dark"
+	    		style="
+	    		text-shadow: 2px 2px 2px #0e0e0e;
+	    		opacity: 0.5;
+	    		"
+	    		>by : {{ post.author }}</h4>
+	    		<p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	  		</div>
 		</div>
 		{% endfor %}
@@ -44,13 +52,13 @@
 		    <div class="collapse navbar-collapse" id="navbarColor03">
 		      <ul class="navbar-nav me-auto">
 		        <li class="nav-item">
-		          <a class="nav-link active" href="#"><i class="bi bi-list"></i> Blog List </a>
+		          <a class="nav-link active" href="/blogs"><i class="bi bi-list"></i> Blog List </a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#"><i class="bi bi-person-check"></i> Login </a>
+		          <a class="nav-link" href="Login/"><i class="bi bi-person-check"></i> Login </a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#"><i class="bi bi-person-plus"></i> Register </a>
+		          <a class="nav-link" href="/blogs/Register"><i class="bi bi-person-plus"></i> Register </a>
 		        </li>
 		      </ul>
 		    </div>
@@ -66,7 +74,8 @@
 	margin-top: 10%;
 	">
   		<fieldset style="padding: 10px;">
-    		<legend class=" ml-3 mb-1"><i class="bi bi-plus-square"></i> Add Blog </legend>
+    		<legend class=" ml-3 mb-1">
+    			<i class="bi bi-plus-square" style="color:#ccc"></i> Add Blog </legend>
     		<div class="form-group row">
       			<div class="col-sm-10">
         			<input type="text"
@@ -76,7 +85,7 @@
         			 class="form-control-plaintext p-1 m-2" id="blogname"
         			 style=" 
         			 outline: none;
-        			 border-left: 5px solid #eee;
+        			 border-left: 5px solid #ccc;
         			 ">
       			</div>
       			<div class="col-sm-10">
@@ -87,7 +96,7 @@
         			class="form-control-plaintext p-1 m-2"
         			id="blogauthor"
         			style=" outline: none;
-        					border-left: 5px solid #eee;
+        					border-left: 5px solid #ccc;
         			">
       			</div>
       			<div class="col-sm-10">
@@ -95,12 +104,12 @@
       				id="exampleTextarea" required rows="3"
       				name="body"
       				style=" outline: none;
-        					border-left: 5px solid #eee;
+        					border-left: 5px solid #ccc;
         			"></textarea>
       			</div>
     		</div>
     		<button type="submit" 
-    		class="btn btn-sm btn-outline-dark ml-2 rounded"
+    		class="btn btn-sm btn-outline-secondary ml-2 rounded"
     		><i class="bi bi-send"></i> Add it </button>
 		</fieldset>
 	</form>
