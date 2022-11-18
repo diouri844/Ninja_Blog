@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+# import User model : 
+from django.contrib.auth.models import User
+
 # define an context object to passe :
 posts = [
 	{'id':1, 'title':'Blog 1','author':'Chopen',"date":"10-10-2022"	},
@@ -20,6 +24,17 @@ def Blog_about(request):
 	return render(request,'Blog/About.html')
 
 def Blog_login(request):
+	if request.method == "POST":
+		print("sending data form :     \n")
+		user_name =request.POST.get('userName')
+		user_email =request.POST.get('userEmail')
+		user_password =request.POST.get('userPassword')
+		print(user_name,user_email,user_password)
+		response_fetch = list(User.objects.all())
+		print("\n response fetch :   ",
+			response_fetch[0].username,
+			response_fetch[0].email,
+			)
 	return render(request,'Blog/Login.html')
 
 def Blog_register(request):
