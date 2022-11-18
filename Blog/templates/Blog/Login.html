@@ -55,13 +55,13 @@
 		    <div class="collapse navbar-collapse" id="navbarColor03">
 		      <ul class="navbar-nav me-auto">
 		        <li class="nav-item">
-		          <a class="nav-link active" href="/blogs"><i class="bi bi-list"></i> Blog List </a>
+		          <a class="nav-link active" href="/"><i class="bi bi-list"></i> Blog List </a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="/blogs/Login"><i class="bi bi-person-check"></i> Login </a>
+		          <a class="nav-link" href="/Login"><i class="bi bi-person-check"></i> Login </a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="/blogs/Register"><i class="bi bi-person-plus"></i> Register </a>
+		          <a class="nav-link" href="/Register"><i class="bi bi-person-plus"></i> Register </a>
 		        </li>
 		      </ul>
 		    </div>
@@ -75,8 +75,10 @@
 	right: 0;
 	margin-right: 5%;
 	margin-top: 10%;
-	">
+	" 
+	method="post">
   		<fieldset style="padding: 10px;">
+  			 {% csrf_token %} 
     		<legend class=" ml-4 mb-1">
     			<i class="bi bi-person-circle" style="color:#ccc"></i> Login : </legend>
     		<div class="form-group row">
@@ -117,7 +119,7 @@
     		class="btn btn-sm btn-outline-secondary  ml-2 rounded"
     		><i class="bi bi-send"></i> Login </button>
     		<a
-    		href="/blogs/Register"
+    		href="/Register"
     		style="
     		margin-left: 5%;
     		text-decoration: underline;
